@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/main/A/lin-solver/linEquation.cpp" "CMakeFiles/linsolver.dir/linEquation.cpp.o" "gcc" "CMakeFiles/linsolver.dir/linEquation.cpp.o.d"
   "/home/main/A/lin-solver/main.cpp" "CMakeFiles/linsolver.dir/main.cpp.o" "gcc" "CMakeFiles/linsolver.dir/main.cpp.o.d"
   "" "linsolver" "gcc" "CMakeFiles/linsolver.dir/link.d"
   )

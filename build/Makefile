@@ -136,6 +136,30 @@ linsolver/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/linsolver.dir/build.make CMakeFiles/linsolver.dir/build
 .PHONY : linsolver/fast
 
+linEquation.o: linEquation.cpp.o
+.PHONY : linEquation.o
+
+# target to build an object file
+linEquation.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/linsolver.dir/build.make CMakeFiles/linsolver.dir/linEquation.cpp.o
+.PHONY : linEquation.cpp.o
+
+linEquation.i: linEquation.cpp.i
+.PHONY : linEquation.i
+
+# target to preprocess a source file
+linEquation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/linsolver.dir/build.make CMakeFiles/linsolver.dir/linEquation.cpp.i
+.PHONY : linEquation.cpp.i
+
+linEquation.s: linEquation.cpp.s
+.PHONY : linEquation.s
+
+# target to generate assembly for a file
+linEquation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/linsolver.dir/build.make CMakeFiles/linsolver.dir/linEquation.cpp.s
+.PHONY : linEquation.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -170,6 +194,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... linsolver"
+	@echo "... linEquation.o"
+	@echo "... linEquation.i"
+	@echo "... linEquation.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

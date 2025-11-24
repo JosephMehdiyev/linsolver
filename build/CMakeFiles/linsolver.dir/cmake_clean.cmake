@@ -1,5 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/linsolver.dir/link.d"
+  "CMakeFiles/linsolver.dir/linEquation.cpp.o"
+  "CMakeFiles/linsolver.dir/linEquation.cpp.o.d"
   "CMakeFiles/linsolver.dir/main.cpp.o"
   "CMakeFiles/linsolver.dir/main.cpp.o.d"
   "linsolver"

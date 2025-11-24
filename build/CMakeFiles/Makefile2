@@ -85,12 +85,12 @@ clean: CMakeFiles/linsolver.dir/clean
 CMakeFiles/linsolver.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/linsolver.dir/build.make CMakeFiles/linsolver.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/linsolver.dir/build.make CMakeFiles/linsolver.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/main/A/lin-solver/build/CMakeFiles --progress-num=1,2 "Built target linsolver"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/main/A/lin-solver/build/CMakeFiles --progress-num=1,2,3 "Built target linsolver"
 .PHONY : CMakeFiles/linsolver.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/linsolver.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/main/A/lin-solver/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/main/A/lin-solver/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/linsolver.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/main/A/lin-solver/build/CMakeFiles 0
 .PHONY : CMakeFiles/linsolver.dir/rule
@@ -102,7 +102,7 @@ linsolver: CMakeFiles/linsolver.dir/rule
 # codegen rule for target.
 CMakeFiles/linsolver.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/linsolver.dir/build.make CMakeFiles/linsolver.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/main/A/lin-solver/build/CMakeFiles --progress-num=1,2 "Finished codegen for target linsolver"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/main/A/lin-solver/build/CMakeFiles --progress-num=1,2,3 "Finished codegen for target linsolver"
 .PHONY : CMakeFiles/linsolver.dir/codegen
 
 # clean rule for target.
