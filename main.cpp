@@ -1,7 +1,10 @@
 #include  <stdio.h>
 #include <iostream>
+#include "linEquation.hpp"
 int main()
 {
-    std::cout << "test" << std::endl;
+    equation test = randGenerator();
+    printMatrix(test.matrix);
+    printVector(test.vector);
     return 0;
 }
