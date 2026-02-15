@@ -1,1 +1,0 @@
-/usr/sbin/c++ -Wl,--dependency-file=CMakeFiles/linsolver.dir/link.d CMakeFiles/linsolver.dir/main.cpp.o CMakeFiles/linsolver.dir/linEquation.cpp.o -o linsolver

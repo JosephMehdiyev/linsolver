@@ -1,7 +1,0 @@
-{
-	"InstallScripts" : 
-	[
-		"/home/main/A/lin-solver/build/cmake_install.cmake"
-	],
-	"Parallel" : false
-}

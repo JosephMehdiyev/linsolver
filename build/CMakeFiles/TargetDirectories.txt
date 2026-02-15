@@ -1,3 +1,0 @@
-/home/main/A/lin-solver/build/CMakeFiles/linsolver.dir
-/home/main/A/lin-solver/build/CMakeFiles/edit_cache.dir
-/home/main/A/lin-solver/build/CMakeFiles/rebuild_cache.dir
