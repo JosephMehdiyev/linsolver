@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 4.2.0)
 
 project(linsolver
         VERSION 0.0.1
-        DESCRIPTION "Linear Algebra Equation Solver"
+        DESCRIPTION "Personal Computation Library"
         LANGUAGES CXX C
 )
 

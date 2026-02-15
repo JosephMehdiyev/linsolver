@@ -1,50 +1,73 @@
 #include "linEquation.hpp"
-#include <cstdlib>
 
 
-equation randGenerator(int matrixSizeRandomnessParam , int matrixValueRandomnessParam, int imageValueRandomnessParam)
+std::vector<std::vector<double>> randMatGen(int matDimRandParam, int matValRandParam, bool isSquareMatrix, int rowN, int columnM)
 {
-    srand(time(NULL));
-    int rowN = static_cast <float> (rand()) / (static_cast <float> (RAND_MAX/matrixSizeRandomnessParam)) + 1;
-    int columnM = static_cast <float> (rand()) / (static_cast <float> (RAND_MAX/matrixSizeRandomnessParam)) + 1;
-    std::vector<std::vector<float>> tempMatrix(rowN, std::vector<float>(columnM));
+    if (rowN == 0)
+        rowN = randomUniform(1, matDimRandParam);
+    if (isSquareMatrix)
+        columnM = rowN;
+    else if (columnM ==0) 
+        columnM = randomUniform(1, matDimRandParam);
+
+    std::vector<std::vector<double>> tempMatrix(rowN, std::vector<double>(columnM));
     for (auto& row : tempMatrix)
     {
         for(auto& val : row)
         {
-            val = static_cast <float> (rand()) / (static_cast <float> (RAND_MAX/matrixValueRandomnessParam));
+            val = randomUniform(-matValRandParam, matValRandParam);
         }
     }
-    std::vector<float> tempVector(rowN);
+    return tempMatrix;
+}
+
+std::vector<double> randVecGen(int vecDim, int vecValRandParam)
+{
+    int rowN = vecDim;
+    int columnM = 1;
+    std::vector<double> vec(rowN);
+    for(auto& val : vec)
+    {
+        val = randomUniform(-vecValRandParam, vecValRandParam);
+    }
+    return vec;
+}
+
+// Generate Random Matrix and Image, Unknown preimage
+equation randEqGen(int matDimRandParam , int matValRandParam, int imageValRandParam)
+{
+    equation final;
+    final.transformation = randMatGen(matDimRandParam, matValRandParam, 0);
+    std::vector<double> tempVector(final.transformation.size());
     for (auto& val : tempVector)
     {
-        val =  static_cast <float> (rand()) / (static_cast <float> (RAND_MAX/matrixValueRandomnessParam));
+        val = randomUniform(-imageValRandParam, imageValRandParam);
     }
-    equation final;
-    final.transformation = tempMatrix;
+
     final.image = tempVector;
     return final;
 }
 
-equation randGenerator(std::vector<float> preimage, int matrixSizeRandomnessParam, int matrixValueRandomnessParam, int imageValueRandomnessParam)
+// Generate random Preimage and Matrix, unknown image
+equation randEqGen(std::vector<double> preimage, int matDimRandParam, int matValRandParam)
 {
-    srand ( time(NULL) );
-    int rowN = static_cast <float> (rand()) / (static_cast <float> (RAND_MAX/matrixSizeRandomnessParam)) + 1;
+    int rowN = randomUniform(1, matDimRandParam);
+
     int columnM = size(preimage);
-    std::vector<std::vector<float>> tempMatrix(rowN, std::vector<float>(columnM));
+    std::vector<std::vector<double>> tempMatrix(rowN, std::vector<double>(columnM));
      for (auto& row : tempMatrix)
     {
         for(auto& val : row)
         {
-            val = static_cast <float> (rand()) / (static_cast <float> (RAND_MAX/matrixValueRandomnessParam));
+             val = randomUniform(-matValRandParam, matValRandParam);
         }
     }
 
-    std::vector<float> res(rowN);
+    std::vector<double> res(rowN);
     int h = 0;
     for(auto& row : tempMatrix)
     {
-        float dot = 0;
+        double dot = 0;
         for(int i = 0; i < columnM; i++)
         {
             dot += row[i] * preimage[i];
@@ -60,26 +83,4 @@ equation randGenerator(std::vector<float> preimage, int matrixSizeRandomnessPara
 }
 
 
-void printMatrix(std::vector<std::vector<float>>& matrix)
-{
-    std::cout << "Printing Matrix..." << std::endl;
-    for(auto& x :matrix)
-    {
-        for(auto& y : x)
-        {
-            std::cout << y << " ";
-        }
-        std::cout << std::endl;
-    }
-}
-
-void printVector(std::vector<float>& vector)
-{
-    std::cout << "Printing Vector..." << std::endl;
-    for(auto& x : vector)
-    {
-        std:: cout << x << " ";
-        std::cout << std::endl;
-    }
-}
 

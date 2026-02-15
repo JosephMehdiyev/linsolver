@@ -8,9 +8,9 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
   "/home/main/A/lin-solver/CMakeLists.txt"
-  "CMakeFiles/4.2.0/CMakeCCompiler.cmake"
-  "CMakeFiles/4.2.0/CMakeCXXCompiler.cmake"
-  "CMakeFiles/4.2.0/CMakeSystem.cmake"
+  "CMakeFiles/4.2.3/CMakeCCompiler.cmake"
+  "CMakeFiles/4.2.3/CMakeCXXCompiler.cmake"
+  "CMakeFiles/4.2.3/CMakeSystem.cmake"
   "/usr/share/cmake/Modules/CMakeCInformation.cmake"
   "/usr/share/cmake/Modules/CMakeCXXInformation.cmake"
   "/usr/share/cmake/Modules/CMakeCommonLanguageInclude.cmake"
