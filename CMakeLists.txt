@@ -9,6 +9,7 @@ project(linsolver
 set(CMAKE_DISABLE_SOURCE_CHANGES ON)
 set(CMAKE_DISABLE_IN_SOURCE_BUILD ON)
 
+include_directories(${linsolver_SOURCE_DIR}/dataStructure)
 
 
 ## ln -s build/compile_commands.json ../compile_commands.json
@@ -22,6 +23,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(SOURCE
     main.cpp
     linEquation.cpp
+    dataStructure/Mat.hpp
 )
 add_executable(linsolver  ${SOURCE})
+target_include_directories(linsolver PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/dataStructure)
 
